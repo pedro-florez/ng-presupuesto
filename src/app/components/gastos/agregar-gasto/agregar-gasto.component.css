@@ -1,0 +1,9 @@
+.form-label::after {
+    color: red;
+    content: ' *';
+    font-weight: 600;
+}
+
+label {
+    font-weight: 600;
+}

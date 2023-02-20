@@ -1,0 +1,17 @@
+.alertsInfo {
+    margin-top: 40px;
+}
+
+.alert {
+    font-size: 1.2rem;
+    padding: 10px 14px;
+}
+
+.list__nombreGasto {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.badge {
+    font-size: 1rem;
+}

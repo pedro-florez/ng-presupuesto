@@ -1,0 +1,52 @@
+<h4 class="text-center mb-3">
+    Listado de Gastos
+</h4>
+
+<div class="row alertsInfo">
+
+    <div class="col-lg-6">
+
+        <div class="alert alert-success">
+            Presupuesto: <strong>{{ presupuesto | currency }}</strong>
+        </div>
+
+    </div>
+
+    <div class="col-lg-6">
+
+        <div 
+        [ngClass]="alertEstadoRestante()">
+            Restante: <strong>{{ restante | currency }}</strong>
+        </div>
+        
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-lg-12">
+
+        <ul        
+        class="list-group list-group-flush">
+
+            <li
+            *ngFor=" let gasto of listaGastos " 
+            class="list-group-item d-flex justify-content-between">
+
+                <span class="list__nombreGasto">
+                    {{ gasto.nombreGasto }}
+                </span>
+
+                <span class="badge bg-secondary rounded-pill">
+                    {{ gasto.monto | currency }}
+                </span>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+

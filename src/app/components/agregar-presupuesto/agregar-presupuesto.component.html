@@ -1,0 +1,42 @@
+<div class="row mt-5">
+
+    <div class="col-lg-6 offset-lg-3">        
+
+        <div class="card text-bg-light">
+
+            <div class="card-body">
+
+                <h2 class="titulo">
+                    Agregar presupuesto
+                </h2>
+
+                <input
+                [(ngModel)]="monto" 
+                type="number" 
+                class="form-control mt-4"
+                step="0.01"
+                placeholder="Ingresar presupuesto">
+
+                <div 
+                *ngIf="formError"
+                class="form-text text-danger">
+                    El presupuesto debe ser mayor a cero.
+                </div>
+
+                <div class="mt-3 d-grid">
+
+                    <button
+                    (click)="guardarPresupuesto()"
+                    class="btn btn-primary">
+                        Guardar
+                    </button>
+        
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>    
+
+</div>

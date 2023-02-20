@@ -1,0 +1,57 @@
+<h4 class="text-center mb-3">
+    Agregar Gasto
+</h4>
+
+<div class="mb-3">
+
+    <label
+    for="nombreLabel"
+    class="form-label">Nombre de gasto</label>
+
+    <input
+    [(ngModel)]="nombreGasto"
+    id="nombreLabel"
+    type="text"
+    class="form-control"
+    placeholder="Ej: comida">
+
+    <div 
+    *ngIf=" formErrors.messageNombreGasto != '' "
+    class="form-text text-danger">
+        {{ formErrors.messageNombreGasto }}     
+    </div>
+
+</div>
+
+<div class="mb-3">
+
+    <label
+    for="montoLabel"
+    class="form-label">Monto</label>
+
+    <input
+    [(ngModel)]="monto"   
+    id="montoLabel"
+    type="number"
+    class="form-control"
+    step="0.01"
+    placeholder="$ ">
+
+    <div 
+    *ngIf=" formErrors.messageMonto != '' "
+    class="form-text text-danger">
+        {{ formErrors.messageMonto }}
+    </div>
+    
+</div>
+
+<div class="mb-3 d-grid">
+
+    <button
+    (click)="guardarGasto()"
+    class="btn btn-primary">
+        Guardar gasto
+    </button>
+
+</div>
+
